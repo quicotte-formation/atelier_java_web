@@ -17,6 +17,15 @@ import webtest.entity.Hotel;
  */
 public class ChambreService {
     
+    public void supprimer(long id){
+        
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        
+        em.getTransaction().begin();
+        Chambre chambre = em.find(Chambre.class, id);
+        em.remove(chambre);
+        em.getTransaction().commit();
+    }
     
     public void ajouter(Chambre c, long hotelId){
         

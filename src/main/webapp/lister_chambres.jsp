@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <c:import url="_MENU.jsp"></c:import>
+        <c:import url="_menu"></c:import>
         <h1>Liste des chambres</h1>
         <a href="ajouter_chambre">Nouvelle chambre</a>
         <table>
@@ -23,6 +23,7 @@
                     <th>CHAMBRE</th>
                     <th>HOTEL</th>
                     <th>PRIX</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,9 +33,13 @@
                         <td>${ch.nom}</td>
                         <td>${ch.hotel.nom}</td>
                         <td>${ch.prix}</td>
+                        <td>
+                            <a href="supprimer_chambre?idChambre=${ch.id}">Supprimer</a>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
+        <c:import url="_PIED.jsp"></c:import>
     </body>
 </html>

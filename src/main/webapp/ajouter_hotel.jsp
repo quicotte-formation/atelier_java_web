@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <c:import url="_MENU.jsp"></c:import>
+        <c:import url="_menu"></c:import>
         <h1>Nouvel hotel</h1>
         <form method="POST">
             <label>Nom hotel</label>
@@ -26,5 +26,6 @@
             <br>
             <input type="submit" value="Ajouter"/>
         </form>
+        <c:import url="_PIED.jsp"></c:import>
     </body>
 </html>

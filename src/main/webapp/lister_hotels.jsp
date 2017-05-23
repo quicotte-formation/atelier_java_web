@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <c:import url="_MENU.jsp"></c:import>
+        <c:import url="_menu"></c:import>
         <h1>Liste hotels</h1>
          <a href="ajouter_hotel">Nouveau</a>
         <table>
@@ -34,5 +34,6 @@
                 </tr>
             </c:forEach>
         </table>
+         <c:import url="_PIED.jsp"></c:import>
     </body>
 </html>

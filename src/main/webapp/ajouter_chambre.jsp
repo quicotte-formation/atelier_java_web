@@ -28,5 +28,6 @@
             </select>
             <input type="submit" value="Ajouter"/>
         </form>
+        <c:import url="_PIED.jsp"></c:import>
     </body>
 </html>

@@ -14,8 +14,12 @@
     </head>
     <body>
         <c:import url="_menu"></c:import>
-        <h1>Liste hotels</h1>
-         <a href="ajouter_hotel">Nouveau</a>
+            
+            <c:if test="${ cookie['langue'].value=='fr' }">
+                Liste hotels
+            </c:if>
+        
+        <a href="ajouter_hotel">Nouveau</a>
         <table>
             <thead>
                 <tr>
@@ -23,6 +27,7 @@
                     <th>NOM</th>
                     <th>ADRESSE</th>
                     <th>ZIP</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <c:forEach items="${listeHotels}" var="h">
@@ -31,9 +36,12 @@
                     <td>${h.nom}</td>
                     <td>${h.adresse}</td>
                     <td>${h.codePostal}</td>
+                    <td>
+                        <a href="supprimer_hotel?hotelId=${h.id}">Supprimer</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
-         <c:import url="_PIED.jsp"></c:import>
+        <c:import url="_PIED.jsp"></c:import>
     </body>
 </html>

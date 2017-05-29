@@ -35,11 +35,8 @@ public class AjouterChambreServlet extends HttpServlet {
         long hotelId = Long.valueOf( req.getParameter("hotelId") );
         service.ajouter(c, hotelId);
         
-        // Forward vers écran AJOUT OK
-        req.getRequestDispatcher("ajout_ok.jsp").forward(req, resp);
-        
         // Redirection vers liste chambres
-//        resp.sendRedirect("lister_chambres");
+        resp.sendRedirect("lister_chambres");
     }
     
     @Override
